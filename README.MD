@@ -1,10 +1,35 @@
+# Project Namn
+
+Cv webaplikation till examensarbete
+
+## För att komam igång
+
+För att starta appen ska du öppna den lokalt i terminalen och köra:
+1.) npm install
+2.) npm start
+
+3.)Logga in eller skapa konto med yahoo eller gmail.
 
 
+## Byggd med
+
+React.js
+Firebase
+Auth0Lock
+D3.js
+React Router
+Css
+Jxs
 
 
----- Routh path ----
+## Byggd av 
 
-app.js -> router.js -> index.js -> index.html
+* **Toni Caktas** - *Initial work* - 
 
-Hämtar urlen från app.js till router.js. Sen hämtar och visar Component beroende vilken url
-den fick av app.js. Och till slut skickas den till index.js och där körs den en render på.  
+
+## Tack till
+
+* Manpower
+* Uniflex
+* Adecco
+* Speed
