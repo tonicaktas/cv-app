@@ -1,0 +1,589 @@
+/* =================================
+  WEB FONTS
+==================================== */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
+
+/* =================================
+  ELEMENT STYLES
+==================================== */
+
+* {
+  box-sizing: border-box;
+}
+body {
+  color: #576366;
+  background: #273547;
+  /*background-image: url('/react-router/router/src/img/app-bg.jpg');*/
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+h1,
+h2,
+ul {
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  color: #404040;
+  font-size: 1.6em;
+  margin-bottom: 1.25em;
+}
+h3 {
+  margin-bottom: 1.5em;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: #3b80d1;
+}
+hr {
+  border: 0;
+  height: 0;
+  margin: 2.3em 0 2em 0;
+  border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+/* FORM & BUTTON STYLES -------- */
+
+.home a,
+input,
+button {
+  padding: .5em;
+  font-size: .9em;
+  margin-right: 10px;
+  border: none;
+  border-radius: 3px;
+  border: solid 1px #ccc;
+  outline: none;
+}
+button {
+  color: white;
+  background: #4188dc;
+  padding-left: 1em;
+  padding-right: 1em;
+  cursor: pointer;
+  border-color: rgba(0,0,0, .1);
+}
+
+/* =================================
+  LAYOUT & PAGE STYLES
+==================================== */
+
+.container {
+  width: 90%;
+  max-width: 1240px;
+  padding-bottom: 2em;
+  margin: 0 auto 2em;
+  background: #fff;
+  border-radius: .5em;
+  box-shadow: 0 3px rgba(0,0,0, .1);
+  overflow: hidden;
+}
+header {
+  background: #edeff0;
+  margin-bottom: 2em;
+}
+.main-content {
+  padding: 1em 2em;
+}
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.course {
+  margin-bottom: 1em;
+}
+
+/* IMAGES -------- */
+
+.course-img {
+  width: 70px;
+}
+.teacher-img {
+  width: 100%;
+  border-radius: .3em;
+}
+.not-found {
+  text-align: center;
+}
+
+/* MAIN NAV -------- */
+
+.main-nav a {
+  font-size: .95em;
+  color: #222;
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+  padding: 1em;
+  transition: .5s;
+}
+.main-nav a:hover,
+.main-nav .active {
+  color: #fff;
+  background: #3b80d1;
+}
+
+/* COURSE NAV -------- */
+
+.course-nav li {
+  display: inline-block;
+}
+.course-nav li + li {
+  margin-left: .6em;
+}
+.course-nav a {
+  font-size: .85em;
+  color: #7d7d7d;
+  padding: .2em .8em;
+  border-radius: .25em;
+  background: #eaebeb;
+  transition: .2s;
+}
+.course-nav a:hover,
+.course-nav a.active {
+  color: #fff;
+  background: #39add1;
+}
+
+/* ICONS -------- */
+
+.icn-logo {
+  background: #54606b;
+  color: #fff;
+}
+.icn-logo i {
+  font-size: 2.45em;
+  line-height: 0;
+  margin-top: 30px;
+}
+.icn-error {
+  font-size: 3.2em;
+  margin-bottom: .25em;
+}
+
+/* =================================
+  MEDIA QUERIES
+==================================== */
+
+@media (min-width: 0) and (max-width: 768px) {
+  body {
+    padding-top: .8em;
+  }
+  .home a {
+    border-color: transparent;
+  }
+   .icn-logo {
+     display: block;
+     width: 100%;
+     text-align: center;
+     padding-bottom: 4px;
+   }
+   .main-nav a {
+     border-top: 2px solid transparent;
+     border-bottom: 2px solid transparent;
+   }
+   .main-nav a:hover {
+     border-color: rgba(0,0,0, .1);
+   }
+   .courses h2 {
+     margin-bottom: 0;
+   }
+   .course-nav {
+     display: block;
+     margin: 1.5em 0 3.2em;
+   }
+   .home a,
+   input,
+   button {
+     display: block;
+     width: 100%;
+     margin-bottom: 1em;
+   }
+}
+@media (min-width: 769px) {
+  body {
+    padding-top: 3em;
+  }
+  .home a {
+    border-color: #3b80d1;
+  }
+  .media img,
+  .media > div,
+  .teacher {
+    float: left;
+  }
+  .media > div {
+    width: 85.1%;
+    margin-left: 1.5em;
+  }
+  .teacher {
+    width: 48.73%;
+    margin-bottom: 1.5em;
+  }
+  .teacher + .teacher {
+    margin-left: 2.54%;
+  }
+  .teacher:nth-child(2n+3) {
+    clear: left;
+    margin-left: 0;
+  }
+  /* MAIN NAV -------- */
+  .icn-logo {
+    margin-right: auto;
+    padding: 0 2em;
+  }
+  header,
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .main-nav a {
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    padding: 1.25em 1.5em;
+  }
+  .main-nav a:hover {
+    border-color: rgba(0,0,0, .1);
+  }
+  /* COURSE NAV -------- */
+  .course-nav {
+    float: right;
+  }
+  .courses h2 {
+    float: left;
+  }
+}
+
+
+/*--------Toni---------------*/
+
+.home-home{
+  padding:70px;
+}
+
+.home-home ul li {
+  font-size:20px;
+}
+
+.home-home h2 {
+  color: #3b80d1;
+  font-size: 32px;
+  font-weight: 200;
+  margin: 70px 0px;
+
+}
+
+.home-home p {
+  font-size:20px;
+  line-height:30px;
+
+}
+
+.home-home h2::after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 100%;
+      margin-top: 16px;
+
+      background: -webkit-linear-gradient(left,rgba(59, 128, 209,1),rgba(0,0,0,0));
+      background: linear-gradient(to right,rgba(59, 128, 209,.35),rgba(0,0,0,0));
+    }
+
+
+.home-home h4 {
+  color:red;
+}
+
+.info,
+.sprak {
+  width:50%;
+  margin: 0 auto;
+}
+
+
+
+
+.info,
+.utbildning,
+.erfarenhet,
+.sprak {
+  padding:0;
+  background: #fff;
+
+  box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+  border-radius: 5px 5px 4px 4px;
+  text-align: center;
+}
+
+.info h2,
+.utbildning h2,
+.erfarenhet h2,
+.sprak h2 {
+  height:58px;
+  border-radius: 4px 4px 0px 0px;
+  background-color: #c25975;
+  color: white;
+  text-align: center;
+  line-height:50px;
+  font-weight:500;
+}
+
+
+.utbildning {
+  margin:140px 0;
+}
+
+.label {
+  color:rgba(0,0,0,.3);
+  display: inline-block;
+  font-family: 'Lato', sans-serif;
+  font-size:.7em;
+
+}
+
+.form {
+  position: absolute;;
+  top:0;
+  left:0;
+  width: 100%;
+  height:100%;
+  background: rgba(250,250,250,.9);
+  color:black;
+  text-align: center;
+  transition: .5s;
+
+}
+
+p {
+  margin: 5px;
+
+}
+input {
+  background: transparent;
+  border:1px solid transparent;;
+  color: #7b8b8e;
+  border-radius: 0;
+  text-align: center;
+  padding:5px;
+  border-bottom:1px solid rgba(0,0,0,.1);
+  width:200px;
+  font-family: 'Lato', sans-serif;
+  margin:5px 0;
+
+}
+
+input:focus {
+  background: white;
+  border:1px solid rgba(0,0,0,.5);
+}
+
+.utbildning input {
+  width:80%;
+}
+
+textarea {
+  width:500px;
+  height:300px;
+  font-family: 'roboto', sans-serif;
+  font-size:16px;
+  padding:2%;
+
+}
+
+.erfarenhet {
+  height:600px;
+  margin:70px 0;
+}
+
+.erfaren-1, .erfaren-2 {
+  display:inline-block;
+  text-align: center;
+}
+
+.erfaren-1 {
+  float:left;
+}
+
+.erfaren-2 {
+  float:right;
+}
+
+.erfarenhet h2 {
+  text-align: center;
+}
+
+.fran-till {
+  display:inline-block;
+}
+
+.fran-till input {
+  width:100px;
+}
+
+.sprak {
+  display:block;
+  width: 50%;
+  text-align: center;
+}
+
+.icn-logo {
+  list-style-type: none;
+}
+
+.icn-logo a {
+  color:white;
+  line-height:60px;
+  text-transform: uppercase;
+}
+
+button{
+  float:right;
+}
+
+
+
+/*=================PRINT================*/
+
+.main-nav li {
+  list-style-type: none;
+}
+
+.container {
+  height:auto;
+  border-radius: 0px;
+  padding-top:70px;
+}
+
+h2 {
+  font-size:18px;
+  margin-bottom: 5px;
+
+
+}
+
+.info-print {
+  background: #fafafa;
+  margin-bottom:70px;
+}
+.info-print p {
+  font-size:12px;
+  margin:2px;
+}
+
+.utbildning-print {
+  margin-bottom:35px;
+}
+
+ul {
+  margin-left:15px;
+}
+
+ul li {
+  list-style-type: disc;
+  margin-left:5px;
+  font-size:14px;
+
+
+}
+
+ul li::first-letter {
+  text-transform: uppercase;
+}
+
+.erfarenhet-print {
+  margin-bottom: 35px;
+  width:80%;
+  font-size:14px;
+}
+
+.erfarenhet-print p:nth-child(3) {
+  margin-bottom:35px;
+}
+
+.navholder {
+  width: 100%;
+  height:50px;
+}
+
+.navholder > a {
+  margin-left:15px;
+  line-height: 50px;
+  background: red;
+  padding:1em 1.5em;
+  color: white;
+  transition:.5s;
+}
+
+.navholder > a:hover {
+  background: #3b80d1;
+  color: white;
+}
+
+.main-nav {
+  float:right;
+}
+
+@media print
+   {
+      header {
+        display: none;
+      }
+
+      .container {
+        height:842px;
+        border-radius: 0px;
+        padding-top:15px;
+      }
+
+      h2 {
+        font-size:18px;
+        margin-bottom: 5px;
+
+
+      }
+
+      .info-print {
+        background: #fafafa;
+        margin-bottom:35px;
+      }
+      .info-print p {
+        font-size:10px;
+        margin:2px;
+      }
+
+      .utbildning-print {
+        margin-bottom:35px;
+      }
+
+      ul {
+        margin-left:15px;
+      }
+
+      ul li {
+        list-style-type: disc;
+        margin-left:5px;
+        font-size:14px;
+        margin:5px;
+
+      }
+
+      ul li::first-letter {
+        text-transform: uppercase;
+      }
+
+      .erfarenhet-print {
+        margin-bottom: 35px;
+        width:80%;
+        font-size:14px;
+      }
+
+      .erfarenhet-print p:nth-child(3) {
+        margin-bottom:35px;
+      }
+   }
